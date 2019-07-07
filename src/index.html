@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>M&S HandBook</title>
-  </head>
-  <body class="text-white m-0">
-  	<header>
-  		<nav class="navbar navbar-dark bg-dark">
-  			<a class="navbar-brand" href="https://lorenalugo.github.io/LIM009-hackathon-peliculas/src/"><img class="rounded-circle" src="./assets/back_app.jpg" alt="M&S-logo" width="30" height="30"></a>
-  			<form id="nav-form" class="d-none form-inline col-10 col-sm-6 col-md-4">
-    			<input id="input-query2" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" />
-    			<button id="btn-search2" class="btn bg-white my-sm-0 rounded-right" type="button"><img class="icon" src="./assets/loupe.png" /></button>
-  			</form>
-			</nav>
-  	</header><!-- /header -->
-  	<main class="main d-flex align-items-center flex-column">
-	<div class="container align-self-center">
-		<div id="buttons" class="container d-none">
-            <button id="btn-rating" class="btn btn-success my-2 my-sm-0" type="button">Top Rating</button>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>M&S HandBook</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none" id="navbar-handbook">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img class="rounded-circle" src="./assets/back_app.jpg" alt="M&S-logo" width="60" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            
+            <form class="form-inline my-2 my-lg-0 ml-auto" id="nav-form">
+              <input  id="input-query-nav" class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button id="btn-search-nav" class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-  		<form id="main-form" class="form-signin text-center">
-  			<img class="mb-4 rounded-circle" src="./assets/back_app.jpg" alt="M&S-logo" width="72" height="72">
-  			<h1 class="h3 mb-3 font-weight-normal">Descubre las Mejores Series y Películas</h1>
-  			<h2 class="h3 mb-3 font-italic">"Una palabra mil emociones"</h2>
-  			<div class="input-group mb-2 mr-sm-2">
-  				<input id="input-query" class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
-    			<div class="input-group-prepend">
-      				<button id="btn-search" class="btn bg-white my-sm-0 rounded-right" type="button"><img class="icon" src="./assets/loupe.png" /></button>
-    			</div>
-  			</div>
-		</form>
-	</div>
-		<div id="result" class="container d-none"></div>
-    </main>
-    <footer class="position-relative w-100 footer text-center">
-    	<p class="position-relative pt-3">@2019, M&S HandBook Copyright</p>
+    </nav>
+    
+  <div class="main-search" id="main-form">      
+    <div class="background-overlay text-white d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="h1">" Una palabra mil emociones "</h1>            
+            <p class="h2 text-info"> <span class="text-warning">M&S</span> HandBook </p>
+            <img class="rounded-circle mb-5" src="./assets/back_app.jpg" alt="M&S-logo" width="100" height="100">
+            <form class="form-inline d-flex justify-content-center text-Fjalla">                 
+              <input  id="input-query" class="form-control form-control-lg w-75 mr-sm-2" type="search" placeholder="Escribe una palabra . . ." aria-label="Search">
+              <button id="btn-search" class="btn btn-info btn-lg my-2 my-sm-0" type="submit">Buscar</button>
+            </form>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-movies" class="d-none">
+      <div class="m-50" id ="sub-content">
+          <h1 class="h2 mb-3 font-weight-bold text-warning text-center">Descubre las Mejores Series y Películas</h1>
+          <button id="btn-rating" class="btn btn-info btn-lg  text-warning" type="button">Top Rating</button>
+      </div>    
+      <br>
+      <div id="result-search" class="result-search"></div>      
+  </div>
+
+  <div id="detail-movie" class="d-none"></div>
+  
+   
+  <footer class="position-relative w-100 footer text-center bg-dark text-white text-Fjalla">
+    	<p class="pt-4">@2019, M&S HandBook Copyright</p>
     </footer>
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
